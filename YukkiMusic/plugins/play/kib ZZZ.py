@@ -1,0 +1,26 @@
+import asyncio
+from pyrogram import Client, filters
+from strings import get_command
+from strings.filters import command
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
+from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+
+
+
+REPLY_MESSAGE = "**صلي علي اشرف خلق الله 🥹✨**"
+
+
+@app.on_message(filters.regex("يـوتيوب. 📽"))
+def reply_to_HEY(Client, message):
+    message.reply_photo(
+        photo=f"https://graph.org/file/6270c9db2449eab390115.jpg",
+        caption=f"""**يتم استخدام هذا الامر لعرض تحميل من اليوتيوب**\n**استخدم الامر بهذا الشكل** `تنزيل` ** او ** `يوتيوب` ** كمثل تنزيل سوره الرحمن اضغط علي الامر لنسخ والاستخدام**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+            [
+                InlineKeyboardButton("˹  𝗭𝗲𝗹𝘇𝗮𝗹 ⁦. 𓌗", url=f"https://t.me/z_zzz8"),
+            ]
+         ]
+     )
+  )
+
