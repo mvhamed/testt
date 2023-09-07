@@ -80,7 +80,7 @@
       },
       "UPSTREAM_REPO": {
         "description": "لا تغيرهــا",
-        "value": "git clone https://github.com/ALSAROT8754/Zelzal",
+        "value": "https://github.com/ALSAROT8754/Zelzal",
         "required": true
       },
       "UPSTREAM_BRANCH": {
