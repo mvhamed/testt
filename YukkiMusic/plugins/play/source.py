@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from strings.filters import command
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from ElNqYbMusic import app
+from YukkiMusic import app
 
 @app.on_message(
     command(["سورس","السورس"])
