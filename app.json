@@ -1,7 +1,7 @@
 {
-    "name": "𝙎𝙊𝙐𝙍𝘾𝙀-𝙕𝙀𝙇𝙕𝘼𝙇",
+    "name": "test",
     "description": "Telegram Group Calls streaming bot with some useful features, written in Python with Pyrogram and Py-Tgcalls. Supporting platforms like Youtube, Spotify, Resso, AppleMusic, Soundcloud and M3u8 Links.",
-    "logo": "https://graph.org/file/6270c9db2449eab390115.jpg",
+    "logo": "https://telegra.ph/file/5ee75c8b81172a947c9eb.jpg",
     "keywords": [
     "python3",
     "telegram",
@@ -15,12 +15,12 @@
     "env": {
       "API_ID": {
         "description": "لا تغيرهــا",
-        "value": "8186557",
+        "value": "25273889",
         "required": true
       },
       "API_HASH": {
         "description": "لا تغيرهــا",
-        "value": "efd77b34c69c164ce158037ff5a0d117",
+        "value": "e0eca70884b07e1b5706f6c09d52cd8b",
         "required": true
       },
       "BOT_TOKEN": {
@@ -40,17 +40,17 @@
       },
       "MUSIC_BOT_NAME": {
         "description": "لا تغيرهــا",
-        "value": "ZELZAL",
+        "value": "JAKOO",
         "required": true
       },
       "NAME_BOT": {
         "description": "حط اسم البوت ب العربي",
-        "value": "",
+        "value": "جورجينا",
         "required": true
       },
       "OWNER_ID": {
         "description": "حط هنا ايدي المطور",
-        "value": "",
+        "value": "5940413527",
         "required": true
       },
       "STRING_SESSION": {
@@ -70,7 +70,7 @@
       },
       "HEROKU_API_KEY": {
         "description": "مفتاح حساب هيروكو الخاص بك",
-        "value": "",
+        "value": "f2d6b92d-3c9c-4dac-9770-0f8ca4ae66fc",
         "required": false
       },
       "HEROKU_APP_NAME": {
@@ -80,12 +80,12 @@
       },
       "LOG_GROUP_ID": {
         "description": "حط ايدي جروب السجل يبدأ ب -100 وارفع البوت والحساب المساعد مشرف الاول",
-        "value": "-100",
+        "value": "-1002112943276",
         "required": true
       },
       "UPSTREAM_REPO": {
         "description": "لا تغيرهــا",
-        "value": "https://github.com/ALSAROT8754/Zelzal",
+        "value": "https://github.com/mvhmed/testt",
         "required": true
       },
       "UPSTREAM_BRANCH": {
