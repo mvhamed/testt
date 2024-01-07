@@ -170,9 +170,9 @@ autoclean = []
 
 
 # Images
-START_IMG_URL = getenv("START_IMG_URL", "https://graph.org/file/6270c9db2449eab390115.jpg")
-IMG_DEV1 = getenv("IMG_DEV1", "https://graph.org/file/6270c9db2449eab390115.jpg")
-IMG_BOT1 = getenv("IMG_BOT1", "https://graph.org/file/6270c9db2449eab390115.jpg")
+START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/5ee75c8b81172a947c9eb.jpg")
+IMG_DEV1 = getenv("IMG_DEV1", "https://telegra.ph/file/5ee75c8b81172a947c9eb.jpg")
+IMG_BOT1 = getenv("IMG_BOT1", "https://telegra.ph/file/5ee75c8b81172a947c9eb.jpg")
 
 PING_IMG_URL = getenv(
     "PING_IMG_URL",
