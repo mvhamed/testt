@@ -43,8 +43,8 @@ def truncate(text):
 
 async def gen_thumb(videoid):
     try:
-        if os.path.isfile(f"cache/{videoid}{photo}.png"):
-            return f"cache/{videoid}{photo}.png"
+        if os.path.isfile(f"cache/{videoid}.jpg"):
+            return f"cache/{videoid}.jpg"
 
         url = f"https://www.youtube.com/watch?v={videoid}"
         if 1 == 1:
@@ -125,7 +125,7 @@ async def gen_thumb(videoid):
 
             image4 = ImageDraw.Draw(image2)
             image4.text(
-                (10, 10), " GEORGINA", fill="white", font=font1, align="left"
+                (10, 10), "Georgina Music", fill="white", font=font1, align="left"
             )
             image4.text(
                 (670, 150),
@@ -161,7 +161,7 @@ async def gen_thumb(videoid):
             # description
             views = f"Views : {views}"
             duration = f"Duration : {duration} Mins"
-            channel = f"Channel : @Mvhmed"
+            channel = f"Channel : @z_zzz8"
 
             image4.text((670, 450), text=views, fill="white", font=font4, align="left")
             image4.text(
@@ -179,4 +179,3 @@ async def gen_thumb(videoid):
     except Exception as e:
         print(e)
         return YOUTUBE_IMG_URL
-    
