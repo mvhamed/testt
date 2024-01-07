@@ -31,7 +31,7 @@ async def arbic(_, query: CallbackQuery):
 async def english(_, query: CallbackQuery):
     await query.answer("home start")
     await query.edit_message_text(
-        f" [※A Telegram Music Bot Based Mongodb](https://t.me/z_zzz8) \n ※[These Features AI Based](https://t.me/z_zzz8)",
+        f" [※A Telegram Music Bot Based Mongodb](https://t.me/mvhmed) \n ※[These Features AI Based](https://t.me/mvhmed)",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -42,11 +42,11 @@ async def english(_, query: CallbackQuery):
                 ],
                 [                
                     InlineKeyboardButton(" Commands", callback_data="cbcmds"),
-                    InlineKeyboardButton(" Donate", url=f"https://t.me/zzzzl1l"),
+                    InlineKeyboardButton(" Donate", url=f"https://t.me/Mvhmed"),
                 ],
                 [
                     InlineKeyboardButton(
-                        "˹  𝗭𝗲𝗹𝘇𝗮𝗹 ⁦. 𓌗", url="https://t.me/z_zzz8"
+                        "˹  𝙈𝙪𝙝𝙖𝙢𝙢𝙚𝙙 𝙆𝙝𝙖𝙡𝙞𝙙 ⁦. 𓌗", url="https://t.me/Mvhmed"
                     )
                 ],
             ]
@@ -78,8 +78,8 @@ async def cbguides(_, query: CallbackQuery):
     await query.answer("user guide")
     await query.edit_message_text(
         f""" **※Welcome \n
-※Show members keyboard Send /ARN \n\n
-※Show entertainment keyboard send /AFYN**
+※Show members keyboard Send /JA \n\n
+※Show entertainment keyboard send /JA**
 """,
         reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙 Go Back", callback_data="english")]]
@@ -93,7 +93,7 @@ async def cbcmds(_, query: CallbackQuery):
     await query.edit_message_text(
         f"""🥹♥ **Hello [{query.message.chat.first_name}](tg://user?id={query.message.chat.id}) !**
 » **press the button below to read the explanation and see the list of available commands !**
-√ __Powered by ˹  𝗭𝗲𝗹𝘇𝗮𝗹 ⁦. 𓌗 """,
+√ __Powered by ˹  𝙈𝙪𝙝𝙖𝙢𝙢𝙚𝙙 𝙆𝙝𝙖𝙡𝙞𝙙 ⁦. 𓌗 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
