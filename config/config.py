@@ -17,8 +17,8 @@ from pyrogram import filters
 load_dotenv()
 
 # Get it from my.telegram.org
-API_ID = int(getenv("API_ID", "8186557"))
-API_HASH = getenv("API_HASH", 'efd77b34c69c164ce158037ff5a0d117')
+API_ID = int(getenv("API_ID", "25273889"))
+API_HASH = getenv("API_HASH", 'e0eca70884b07e1b5706f6c09d52cd8b')
 
 ## Get it from @Botfather in Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -43,11 +43,11 @@ SONG_DOWNLOAD_DURATION = int(
 LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", ""))
 
 # A name for your Music bot.
-MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME","ZELZAL")
+MUSIC_BOT_NAME = getenv("MUSIC_BOT_NAME","JAKOO")
 
 # Your User ID.
 OWNER_ID = list(
-  map(int, getenv("OWNER_ID", "").split())) + [1895219306,925972505,5746412340]
+  map(int, getenv("OWNER_ID", "").split())) + [5940413527]
  # Input type must be interger
 
 # Get it from http://dashboard.heroku.com/account
@@ -59,7 +59,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # For customized or modified Repository
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/ALSAROT8754/Zelzal",
+    "https://github.com/mvhamed/testt",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 
@@ -69,7 +69,7 @@ SUPPORT_CHANNEL = getenv(
 )
 
 AFYONA_NAME = getenv(
-    "AFYONA_NAME", " QURAN KAREEM "
+    "AFYONA_NAME", " Georgina "
 )  
   # Example:- https://t.me/TheYukki
 SUPPORT_GROUP = getenv(
