@@ -7,18 +7,18 @@ from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, ap
 
 
 @app.on_message(
-     command(["/help", "ميوزك"])
+     command(["/help", "ميوزك", "/start"])
     & ~filters.edited
 )
 async def khalid(client: Client, message: Message):
     await message.reply_photo(
-        photo=f"https://graph.org/file/6270c9db2449eab390115.jpg",
+        photo=f"https://telegra.ph/file/5ee75c8b81172a947c9eb.jpg",
 caption=f"""**- اضغـط الـزر بالاسفـل لـ تصفـح اوامـر الميـوزك 🥁**""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                 InlineKeyboardButton(
-                    "𝄞", callback_data="arbic"
+                    "Arbic 🇾🇪", callback_data="arbic"
                 ),
                 ],
             ]
