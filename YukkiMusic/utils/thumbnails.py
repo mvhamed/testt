@@ -13,10 +13,6 @@ import numpy as np
 from config import YOUTUBE_IMG_URL
 
 
-def make_col():
-    return (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
-
-
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
     heightRatio = maxHeight / image.size[1]
@@ -24,55 +20,39 @@ def changeImageSize(maxWidth, maxHeight, image):
     newHeight = int(heightRatio * image.size[1])
     newImage = image.resize((newWidth, newHeight))
     return newImage
+ahmed = ""
 
-
-def truncate(text):
-    list = text.split(" ")
-    text1 = ""
-    text2 = ""
-    for i in list:
-        if len(text1) + len(i) < 30:
-            text1 += " " + i
-        elif len(text2) + len(i) < 30:
-            text2 += " " + i
-
-    text1 = text1.strip()
-    text2 = text2.strip()
-    return [text1, text2]
-
-
-async def gen_thumb(videoid):
-    try:
+async def gen_thumb(videoid, photo):
+   try:
         if os.path.isfile(f"{videoid}{photo}.png"):
           return f"{videoid}{photo}.png"
         url = f"https://www.youtube.com/watch?v={videoid}"
         results = VideosSearch(url, limit=1)
         for result in (await results.next())["result"]:
-                try:
-                    title = result["title"]
-                    title = re.sub("\W+", " ", title)
-                    title = title.title()
-                except:
-                    title = "Unsupported Title"
-                try:
-                    duration = result["duration"]
-                except:
-                    duration = "Unknown Mins"
-                thumbnail = result["thumbnails"][0]["url"].split("?")[0]
-                try:
-                    views = result["viewCount"]["short"]
-                except:
-                    views = "Unknown Views"
-                try:
-                    channel = result["channel"]["name"]
-                except:
-                    channel = "Unknown Channel"
+            try:
+                title = result["title"]
+                title = re.sub("\W+", " ", title)
+                title = title.title()
+            except:
+                title = "Unsupported Title"
+            try:
+                duration = result["duration"]
+            except:
+                duration = "Unknown Mins"
+            thumbnail = result["thumbnails"][0]["url"].split("?")[0]
+            try:
+                views = result["viewCount"]["short"]
+            except:
+                views = "Unknown Views"
+            try:
+                channel = result["channel"]["name"]
+            except:
+                channel = "Unknown Channel"
 
-            async with aiohttp.ClientSession() as session:
-                async with session.get(
-                    f"http://img.youtube.com/vi/{videoid}/maxresdefault.jpg"
-                ) as resp:
-                    if resp.status == 200:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(thumbnail) as resp:
+                if resp.status == 200:
+                    f = await aiofiles.open(
                         f"cache/thumb{videoid}.png", mode="wb"
                     )
                     await f.write(await resp.read())
@@ -155,6 +135,7 @@ async def gen_thumb(videoid):
         )
         background.save(f"{videoid}{photo}.png")
         return f"{videoid}{photo}.png"
-    except Exception as a:
+   except Exception as a:
         print(a)
-        return YOUTUBE_IMG_URL
+        return ahmed
+       
