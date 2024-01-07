@@ -72,14 +72,14 @@ async def gen_thumb(videoid):
 
             async with aiohttp.ClientSession() as session:
                 async with session.get(
-                    f"http://img.youtube.com/vi/{videoid}/maxresdefault.png"
+                    f"http://img.youtube.com/vi/{videoid}/maxresdefault.jpg"
                 ) as resp:
                     if resp.status == 200:
-                        f = await aiofiles.open(f"cache/thumb{videoid}.png", mode="wb")
+                        f = await aiofiles.open(f"cache/thumb{videoid}.jpg", mode="wb")
                         await f.write(await resp.read())
                         await f.close()
 
-            youtube = Image.open(f"cache/thumb{videoid}.png")
+            youtube = Image.open(f"cache/thumb{videoid}.jpg")
             image1 = changeImageSize(1280, 720, youtube)
             image2 = image1.convert("RGBA")
             background = image2.filter(filter=ImageFilter.BoxBlur(30))
@@ -173,8 +173,8 @@ async def gen_thumb(videoid):
 
             image2 = ImageOps.expand(image2, border=20, fill=make_col())
             image2 = image2.convert("RGB")
-            image2.save(f"cache/{videoid}.png")
-            file = f"cache/{videoid}.png"
+            image2.save(f"cache/{videoid}.jpg")
+            file = f"cache/{videoid}.jpg"
             return file
     except Exception as e:
         print(e)
